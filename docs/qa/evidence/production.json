@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-19T15:53:21.262Z",
+  "url": "https://one-measure-workshop-game.vercel.app",
+  "metadata": {
+    "buildId": "c019fa7c2f6a0c59",
+    "appVersion": "1.0.0",
+    "contentVersion": "1",
+    "schemaVersion": 1
+  },
+  "browser": "155.0.8059.80",
+  "viewport": "390x844 CSS px",
+  "sixOrdersPassed": true,
+  "gestureAudioStartStop": true,
+  "persistedProgressReload": true,
+  "offlineReloadAndExport": true,
+  "pageErrors": [],
+  "failedResponses": [],
+  "externalRequests": [],
+  "manualListening": "NOT_RUN",
+  "physicalDevice": "NOT_RUN"
+}

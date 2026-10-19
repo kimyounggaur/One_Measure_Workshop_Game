@@ -1,1 +1,1 @@
-M00/S00–S16 구현·자동 검증·후보 문서 완료. 정상 GitHub push와 별도 Vercel 배포 및 운영 검증을 진행한다. 물리 기기/청취/AT/교육·운영 수동 게이트는 미실시로 정식 출시 수용 보류다. 상세는 progress.md와 reports/S15/S16 및 qa/evidence를 따른다.
+M00/S00–S16 구현·자동 검증·후보 문서와 정상 GitHub push/별도 Vercel READY/운영 브라우저 검증 완료. 운영: https://one-measure-workshop-game.vercel.app . 기능 source commit5eb09e2d2471cab68744881a1b441c7c2d2548db, buildc019fa7c2f6a0c59. 실제 기존탭 업데이트도 작품/진도보존을 통과했다. 물리 기기/청취/AT/교육·운영 수동 게이트는 미실시로 정식 출시 수용 보류다. release/deployment.json 및 qa/evidence 참조.

@@ -54,4 +54,4 @@ npm run test:soak
 
 제공된 설계·프롬프트와 runtime 에셋을 별도 폴더에 복사해 개발했습니다. 원본 백업은 수정하지 않았습니다. [탐색 기록](docs/discovery.md), [원문](docs/source/README.md), [에셋 고지](docs/ASSET_NOTICES.md), [의존성 고지](THIRD_PARTY_NOTICES.txt)를 확인하세요. 런타임은 외부 글꼴·광고·분석 SDK·로그인·마이크를 사용하지 않습니다. [개인정보와 호스팅 구분](docs/release/privacy.md)을 함께 읽으세요.
 
-GitHub 대상: [kimyounggaur/One_Measure_Workshop_Game](https://github.com/kimyounggaur/One_Measure_Workshop_Game). 운영 URL과 commit/READY 검증은 최종 배포 기록으로 추가합니다.
+GitHub 대상: [kimyounggaur/One_Measure_Workshop_Game](https://github.com/kimyounggaur/One_Measure_Workshop_Game). [바로 플레이](https://one-measure-workshop-game.vercel.app) · [배포·검증 기록](docs/release/deployment.json). 실제 운영 Chrome에서 여섯 주문·오디오 시작/정지·저장·오프라인·백업 및 이전 버전의 명시적 업데이트를 확인했습니다.

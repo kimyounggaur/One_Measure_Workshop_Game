@@ -1,0 +1,37 @@
+{
+  "recordVersion": 1,
+  "applicationSourceCommit": "5eb09e2d2471cab68744881a1b441c7c2d2548db",
+  "repository": "https://github.com/kimyounggaur/One_Measure_Workshop_Game",
+  "branch": "main",
+  "project": {
+    "id": "prj_C34oqhlGtztyvVFMYL17OxhXD2az",
+    "name": "one-measure-workshop-game",
+    "teamId": "team_LVPR6NYP0tQeNt45mw0XXfH0",
+    "framework": "vite",
+    "nodeVersion": "24.x"
+  },
+  "deployment": {
+    "id": "dpl_DvFpZXb3zRbg7qD4TmVP9e7nhQao",
+    "target": "production",
+    "readyState": "READY",
+    "gitCommit": "5eb09e2d2471cab68744881a1b441c7c2d2548db",
+    "readyAt": "2026-10-19T15:51:55.846Z",
+    "url": "https://one-measure-workshop-game.vercel.app",
+    "buildId": "c019fa7c2f6a0c59"
+  },
+  "verification": {
+    "httpStatus": 200,
+    "localAndVercelBuildIdentityMatch": true,
+    "productionBrowser": "PASS",
+    "productionBrowserEvidence": "../qa/evidence/production.json",
+    "liveUpdate": "PASS",
+    "liveUpdateEvidence": "../qa/evidence/live-update.json",
+    "runtimeErrorScan": "No error/fatal function logs found in the 30-minute window ending 2026-10-19T15:54:26Z; static site has no application functions.",
+    "manualListening": "NOT_RUN",
+    "physicalDevices": "NOT_RUN",
+    "assistiveTechnology": "NOT_RUN",
+    "educationReview": "NOT_RUN"
+  },
+  "releaseDecision": "Test deployment completed; formal educational release acceptance remains held for documented manual gates.",
+  "documentationNote": "This record identifies the application source release. A later documentation-only commit records this evidence without changing the build inputs."
+}

@@ -10,4 +10,4 @@
 
 실행: Node24/npm, npm ci --no-audit --no-fund; npm run dev(5386); npm run build/preview(4386); npm run verify; npm run test:soak(실제20분). 오프라인은 production/HTTPS에서 준비 완료를 확인한 뒤 사용한다. 사용자가 export한 JSON만 직접 다른 기기로 옮길 수 있다.
 
-GitHub 대상 kimyounggaur/One_Measure_Workshop_Game, 새 Vercel 프로젝트 one-measure-workshop-game. 사용자 승인에 따라 정상 commit/push와 READY·commit·실제운영URL 검증을 이어서 진행한다. 완료 후 release/deployment.json에 결과를 고정한다. force push·새 인증·권한 확대·유료 기능 활성화는 하지 않는다.
+GitHub 대상 kimyounggaur/One_Measure_Workshop_Game, 새 Vercel 프로젝트 one-measure-workshop-game. 사용자 승인에 따라 정상 commit/push와 READY·commit·실제운영URL 검증을 완료했다. 기능 source commit5eb09e2d2471cab68744881a1b441c7c2d2548db, 운영 https://one-measure-workshop-game.vercel.app . release/deployment.json에 실제 결과를 고정했고 이후 문서 커밋도 동일 buildId로 확인한다. force push·새 인증·권한 확대·유료 기능 활성화는 하지 않는다.

@@ -13,7 +13,7 @@
 | S14 | AUTO_PASS / EDUCATION_PENDING | T1–T8·교육 review-pack; 실제 검수 미실시 |
 | S15 | AUTO_PASS / MANUAL_PENDING | 최신 전체 verify+20분497회; reports/S15 |
 | S16 | CANDIDATE_DOCUMENTED / RELEASE_HELD | README/release 문서/fresh 설치; reports/S16 |
-| GitHub push | PENDING | 사용자 승인; 직전 원격 빈 저장소 확인 |
-| Vercel 별도 배포 | PENDING | 사용자 승인; 새 프로젝트·READY/commit/URL 검증 예정 |
+| GitHub push | COMPLETE | bb50242→5eb09e2 정상push; 원격이력보존 |
+| Vercel 별도 배포 | READY / BROWSER_PASS | 새프로젝트·일치하는commit/buildId·실제운영URL·업데이트보존 |
 
 최종 unit140/content21/integration56/Chrome64 E2E(audio15 포함),Edge주요25,20분soak1. buildc019fa7c2f6a0c59. 수동 청취/기기/AT/교육·운영 결정은 별도 상태이며 정식 출시 수용은 보류한다. requirements.csv,qa/matrix.md와 evidence의 실제 기록을 따른다.

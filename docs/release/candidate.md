@@ -12,7 +12,7 @@
 | gradingVersion | 문자열 1 | domain/grading.ts |
 | buildId | c019fa7c2f6a0c59 | 최종 빌드 입력으로 clean 폴더 재현 |
 
-package-lock SHA256: `769019d808e8559191a73bdfc06f5185f1e220a65b224eb05cde72cd0247a684`. 공개되는 source commit은 최종 Git 기록에 고정한다. 배포 commit, READY, URL, 실제 접근은 배포 후 별도 기록하며 미리 성공으로 표시하지 않는다.
+package-lock SHA256: `769019d808e8559191a73bdfc06f5185f1e220a65b224eb05cde72cd0247a684`. 기능 구현·검증 기준 source commit은 5eb09e2d2471cab68744881a1b441c7c2d2548db다. 별도 Vercel 프로젝트가 같은 커밋으로 READY이고 실제 운영 URL https://one-measure-workshop-game.vercel.app 의 HTTP200/buildId/게임·오디오·저장·오프라인·백업과 기존탭 업데이트를 확인했다. deployment.json과 qa/evidence의 production/live-update를 참조한다. 이후 배포 기록 문서 커밋은 앱 빌드 입력을 변경하지 않는다.
 
 구현 범위: 튜토리얼5단계, 여섯 퍼즐 전체 의미 정답, 단계형 터치/목록/키보드/undo, hint/solution/설명/시각 대안 분리, A/B·자유 조립, 실제 시계 합성음·중단, 선택 탭·보정·신뢰도, transactional 저장·복구·백업·다중 탭 보호, 검증된 cache·사용자 적용 업데이트, 테마/기호/접근성 대체 경로, T1–T8 진단/전이와 사람 검수용 문서다.
 

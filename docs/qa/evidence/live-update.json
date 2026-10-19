@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-19T15:53:20.337Z",
+  "oldBuildId": "4a4958f23f4907e4",
+  "newBuildId": "c019fa7c2f6a0c59",
+  "oldPageNotReloadedByWaiting": true,
+  "explicitHomeApply": true,
+  "draftAndTheoryUnchanged": true,
+  "noAutomaticAudioRestart": true,
+  "oldCacheRemovedAfterNewAck": true,
+  "newBuildOfflineReload": true,
+  "browser": "155.0.8059.80",
+  "manualListening": "NOT_RUN"
+}

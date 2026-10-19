@@ -1,0 +1,61 @@
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Cloning github.com/kimyounggaur/One_Measure_Workshop_Game (Branch: main, Commit: 5eb09e2)
+Cloning completed: 396.000ms
+Restored build cache from previous deployment (6P2TYKGwsVRpYv1StEBN9RYoDVni)
+Running "vercel build"
+Vercel CLI 64.3.1
+Running "install" command: `npm ci --no-audit --no-fund`...
+npm warn Unknown env config "cache-dir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+added 142 packages in 3s
+npm warn Unknown env config "cache-dir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> one-measure-workshop@1.0.0 build
+> npm run test:content && tsc --noEmit && vite build && node scripts/build-offline.mjs
+
+npm warn Unknown env config "cache-dir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> one-measure-workshop@1.0.0 test:content
+> vitest run tests/content
+
+
+ RUN  v5.0.5 /vercel/path0
+
+stdout | tests/content/enumeration.test.ts > S04 source oracle exact answer sets > U13/U14 exhaustively verifies both differences of all six sets
+measure-01: candidates=1 semantic=1 answers=[["N2","N2","N2","N2"]]
+measure-02: candidates=1 semantic=1 answers=[["N2","N1","N1","N2","N2"]]
+measure-03: candidates=16 semantic=1 answers=[["N2","N2","R2","N2"]]
+measure-04: candidates=5 semantic=3 answers=[["N4","N2","N2"],["N2","N4","N2"],["N2","N2","N4"]]
+measure-05: candidates=16 semantic=2 answers=[["N2","N2","N2","R2"],["N2","R2","N2","N2"]]
+measure-06: candidates=2448 semantic=1 answers=[["R1","N1","N2","N1","R1","N2"]]
+
+ ✓ tests/content/enumeration.test.ts (16 tests) 352ms
+   ✓ S04 source oracle exact answer sets (16)
+     ✓ U13/U14 exhaustively verifies both differences of all six sets 339ms
+ ✓ tests/content/transfer.test.ts (5 tests) 8ms
+
+ Test Files  2 passed (2)
+      Tests  21 passed (21)
+   Start at  15:51:48
+   Duration  899ms (tests 56%, transform 32%, import 10%, worker 1%)
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 74 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/build-meta.json              0.09 kB │ gzip:   0.09 kB
+dist/index.html                   0.54 kB │ gzip:   0.41 kB
+dist/assets/index-DyTIyGNy.css   25.08 kB │ gzip:   5.86 kB
+dist/assets/index-9mMrZHZU.js   371.39 kB │ gzip: 114.91 kB
+
+✓ built in 317ms
+Offline manifest: 213 verified files, 759685 bytes, build c019fa7c2f6a0c59
+Build Completed in /vercel/output [11s]
+Deploying outputs...
+Deployment completed
+Creating build cache...
+Created build cache: 3s
+Uploading build cache [38.82 MB]
+Build cache uploaded: 770.000ms
