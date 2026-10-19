@@ -4,7 +4,7 @@
 
 1. `npm ci --no-audit --no-fund` 실제 실행: exit0, 140 packages 설치(약14초). 기존 lockfile 사용, 버전 재선택 없음.
 2. `npm run check` 실제 실행: typecheck/lint/unit140/content21/build 모두 exit0.
-3. 최종 build identity/라이선스 배포 파일 추가를 반영한 뒤 같은 clean 설치에서 check를 다시 실행: exit0. buildId **4a4958f23f4907e4**, 필수 manifest **213파일 / 759,685 bytes**.
+3. 최종 build identity/라이선스 배포 파일 추가를 반영한 뒤 같은 clean 설치에서 check를 다시 실행: exit0. buildId **c019fa7c2f6a0c59**, 필수 manifest **213파일 / 759,685 bytes**.
 
 설치 확인과 기존 node_modules에서의 build를 혼동하지 않는다. 마지막 재검사에서 재설치할 필요가 있는 의존성/lockfile 변경은 없었다. package-lock SHA256은 `769019d808e8559191a73bdfc06f5185f1e220a65b224eb05cde72cd0247a684`이다.
 

@@ -1,0 +1,55 @@
+{
+  "samples": [
+    {
+      "elapsedMs": 10146,
+      "status": "오프라인 준비 전 · 온라인",
+      "installing": "installing",
+      "caches": [
+        {
+          "name": "one-measure-cache-4a4958f23f4907e4",
+          "files": 177
+        }
+      ],
+      "responses": 189,
+      "last": [
+        {
+          "url": "https://one-measure-workshop-game.vercel.app/assets/tiles/tile-R4-dark-locked.svg",
+          "status": 200,
+          "at": 1792424583895
+        },
+        {
+          "url": "https://one-measure-workshop-game.vercel.app/assets/tiles/tile-R4-dark-selected.svg",
+          "status": 200,
+          "at": 1792424584112
+        }
+      ]
+    },
+    {
+      "elapsedMs": 20168,
+      "status": "오프라인 준비 완료 · 온라인",
+      "active": "activated",
+      "controller": "activated",
+      "caches": [
+        {
+          "name": "one-measure-cache-4a4958f23f4907e4",
+          "files": 214
+        }
+      ],
+      "responses": 225,
+      "last": [
+        {
+          "url": "https://one-measure-workshop-game.vercel.app/build-meta.json",
+          "status": 200,
+          "at": 1792424591589
+        },
+        {
+          "url": "https://one-measure-workshop-game.vercel.app/index.html",
+          "status": 200,
+          "at": 1792424591807
+        }
+      ]
+    }
+  ],
+  "failed": [],
+  "errors": []
+}

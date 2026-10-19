@@ -15,10 +15,10 @@
 | 신뢰도 | R10,R15 | unit/performance fixtures, integration/input-audio/machine, E2E/performance: fallback·queue·invalidated·all-rest | 안내 해석 인터뷰 없음 | AUTO_PASS / MANUAL_PENDING |
 | 학습 | R10,R22 | content/transfer, E2E/puzzle-flow/transfer: 무음·힌트·해답·설명 분리·T1–T8 | 교육 검수/파일럿/학습효과 미실시 | AUTO_PASS / EDUCATION_PENDING |
 | 저장 | R17–18 | unit/importExport, integration/storage, E2E/recovery: transaction/readback·fencing·손상·20슬롯·악성 import·roundtrip·두 탭 | 실제 디스크 가득 참/공간 회수 미실시. quota 등은 주입 실패 | AUTO_PASS / DEVICE_PENDING |
-| 오프라인 | R19 | unit/update, E2E/offline-update 5: 준비·최초 미준비·부분 캐시·waiting·실패·DB 보존·offline reload | 물리 비행기 모드 없음 | AUTO_PASS / DEVICE_PENDING |
+| 오프라인 | R19 | unit/update, E2E/offline-update 6: 준비·최초 미준비·부분 캐시·waiting·실패·DB 보존·offline reload | 물리 비행기 모드 없음 | AUTO_PASS / DEVICE_PENDING |
 | 접근성 | R09,R21 | E2E/accessibility 13 + editor: 12폭/테마/글자 조합 axe0·overflow0·대비 및 forced-colors/reduced-motion | VoiceOver/TalkBack/OS 200% zoom 미실시 | AUTO_PASS / BLOCKED_DEVICE |
 | 성능 | R24 | E2E/metrics: 20 cold·30 pointer·20화면·30저장·1000domain·번들. 별도 실시간20분 soak | 지정 물리 중급/저사양 모바일·망 없음 | AUTO_PASS / DEVICE_PENDING |
 | 개인정보 | R20 | E2E/privacy: 외부 요청0·비GET0·capture0·beacon0·쿠키0·DB/백업 raw 입력 키0. unit/importExport 악성 입력 | 호스팅 보존기간/운영 문구 책임자 확인 미실시 | AUTO_PASS / MANUAL_PENDING |
 | 출시 문구 | R21,R24 | 앱 도움말의 테스트 버전 표시, 원본 provenance, 의존성 MIT 원문 포함, S16 릴리스 문서 대조 완료 | 책임자·교육·실기기 지원 선언 없음 | DOCUMENTED / MANUAL_PENDING |
 
-최종 변경 후 전체 Chrome 회귀63개를 실행하여 전부 통과했다. S15/S16 보고와 evidence/verification-output.txt에 고정했다. 테스트용 주입, 실제 브라우저 API, 사람 관찰은 서로 다른 증거다.
+최종 변경 후 전체 Chrome 회귀64개를 실행하여 전부 통과했다. S15/S16 보고와 evidence/verification-output.txt에 고정했다. 테스트용 주입, 실제 브라우저 API, 사람 관찰은 서로 다른 증거다.

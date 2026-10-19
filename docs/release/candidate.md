@@ -10,7 +10,7 @@
 | contentVersion | 문자열 1 | document, build-meta |
 | puzzleVersion | 각 주문 숫자1 | content/puzzles/measure-01–06.json |
 | gradingVersion | 문자열 1 | domain/grading.ts |
-| buildId | 4a4958f23f4907e4 | 최종 빌드 입력으로 clean 폴더 재현 |
+| buildId | c019fa7c2f6a0c59 | 최종 빌드 입력으로 clean 폴더 재현 |
 
 package-lock SHA256: `769019d808e8559191a73bdfc06f5185f1e220a65b224eb05cde72cd0247a684`. 공개되는 source commit은 최종 Git 기록에 고정한다. 배포 commit, READY, URL, 실제 접근은 배포 후 별도 기록하며 미리 성공으로 표시하지 않는다.
 

@@ -9,7 +9,14 @@ self.addEventListener('install',event=>event.waitUntil((async()=>{
   const cache=await caches.open(CACHE);
   try{
     if(MANIFEST.contentVersion!=='1'||MANIFEST.schemaVersion!==1)throw new Error('Content/schema mismatch');
-    for(const file of MANIFEST.files){const response=await fetch(file.url,{cache:'reload'});if(!response.ok||await digest(await response.clone().arrayBuffer())!==file.sha256)throw new Error('Required asset verification failed: '+file.url);await cache.put(file.url,response);}
+    // Bound network concurrency without publishing a partial cache. Settle the entire
+    // current batch before failure cleanup, so no sibling writes outlive deletion.
+    for(let start=0;start<MANIFEST.files.length;start+=6){
+      const batch=await Promise.allSettled(MANIFEST.files.slice(start,start+6).map(async file=>{
+        const response=await fetch(file.url,{cache:'reload'});if(!response.ok||await digest(await response.clone().arrayBuffer())!==file.sha256)throw new Error('Required asset verification failed: '+file.url);await cache.put(file.url,response);
+      }));
+      const failed=batch.find(result=>result.status==='rejected');if(failed)throw failed.reason;
+    }
     for(const file of MANIFEST.files)if(!await cache.match(file.url))throw new Error('Incomplete cache');
     await cache.put(marker,new Response(JSON.stringify({buildId:MANIFEST.buildId,contentVersion:MANIFEST.contentVersion})));
   }catch(error){await caches.delete(CACHE);throw error;}

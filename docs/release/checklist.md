@@ -16,7 +16,7 @@
 | 에셋/글꼴/의존성 출처 | DOCUMENTED | 사용자 원문/hash 보존, 실제 MIT LICENSE; 별도 법률 판단 아님 |
 | 지원환경·개인정보·실제 배포 설정 일치 | PENDING_DEPLOYMENT / MANUAL_PENDING | 배포 후 READY·SHA·URL 및 프로젝트 설정 대조; 운영자 정책 미확정 |
 | 이전 배포 rollback 문서 손상 없음 | PARTIAL_AUTO / NOT_RUN_REMOTE | schema1/cache 실패 보존 자동 검사; 원격 rollback 실행 안 함 |
-| 최종 전체 회귀·성능·20분 | AUTO_PASS | Chrome63·20분497회·최종 성능, S15 보고 |
+| 최종 전체 회귀·성능·20분 | AUTO_PASS | Chrome64·20분497회·최종 성능, S15 보고 |
 | fresh install/build/check | AUTO_PASS | 별도 clean 폴더 npm ci/check, build-reproduction |
 | 교육효과 검증 | NOT_RUN | 효과 보장/능력 점수/마케팅 수치 없음 |
 

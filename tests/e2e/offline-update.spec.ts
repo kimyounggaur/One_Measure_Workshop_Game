@@ -6,6 +6,16 @@ async function ready(page:Page){await expect(page.getByTestId('offline-status'))
 async function editLease(page:Page){if(await page.getByRole('button',{name:'여기서 편집하기',exact:true}).isVisible())await page.getByRole('button',{name:'여기서 편집하기',exact:true}).click();}
 async function variant(id:string,missing=false,mismatch=false){let script=await readFile(resolve('dist/sw.js'),'utf8');const line=script.match(/const MANIFEST=(.*);/);if(!line)throw new Error('No manifest');const manifest=JSON.parse(line[1]);manifest.buildId=id;if(missing)manifest.files[0].url='/missing-required-file.svg';if(mismatch)manifest.contentVersion='future';script=script.replace(line[0],`const MANIFEST=${JSON.stringify(manifest)};`);await writeFile(fixturePath,script);}
 test.afterEach(async()=>{await unlink(fixturePath).catch(()=>undefined);});
+test('offline install overlaps network latency with at most six verified downloads',async({page})=>{
+  await page.goto('/');await ready(page);await variant('parallel-install-v2');
+  const source=await readFile(fixturePath,'utf8');
+  const measurement=`let poolActive=0,poolPeak=0,poolCount=0;const nativeFetch=self.fetch.bind(self);self.fetch=async(...args)=>{poolActive++;poolPeak=Math.max(poolPeak,poolActive);poolCount++;try{await new Promise(resolve=>setTimeout(resolve,80));return await nativeFetch(...args);}finally{poolActive--;}};self.addEventListener('message',event=>{if(event.data?.type==='POOL_STATS')event.ports[0].postMessage({active:poolActive,peak:poolPeak,count:poolCount});});\n`;
+  await writeFile(fixturePath,measurement+source);const started=Date.now();
+  await page.evaluate(async()=>{await navigator.serviceWorker.register('/sw-fixture.js',{scope:'/',updateViaCache:'none'});});
+  await expect.poll(()=>page.evaluate(async()=>!!(await navigator.serviceWorker.getRegistration())?.waiting),{timeout:15000}).toBe(true);
+  const stats=await page.evaluate(async()=>{const worker=(await navigator.serviceWorker.getRegistration())!.waiting!;return new Promise<{active:number;peak:number;count:number}>(resolve=>{const channel=new MessageChannel();channel.port1.onmessage=event=>{channel.port1.close();resolve(event.data);};worker.postMessage({type:'POOL_STATS'},[channel.port2]);});});
+  expect(stats.active).toBe(0);expect(stats.peak).toBeGreaterThan(1);expect(stats.peak).toBeLessThanOrEqual(6);expect(stats.count).toBe(JSON.parse(await readFile('dist/offline-manifest.json','utf8')).files.length);expect(Date.now()-started).toBeLessThan(15000);
+});
 test('production cache supports offline six orders, free synthesis, save and JSON export/import',async({context,page})=>{
   await page.goto('/');await ready(page);await context.setOffline(true);await page.reload();await expect(page.getByTestId('offline-status')).toContainText('현재 오프라인');await editLease(page);
   for(let index=1;index<=6;index++){await page.getByRole('button',{name:new RegExp(`주문 0${index}`)}).click();await expect(page.getByRole('button',{name:'조건 확인하기'})).toBeVisible();await page.getByRole('button',{name:'주문 목록',exact:true}).click();}

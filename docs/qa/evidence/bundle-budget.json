@@ -1,8 +1,8 @@
 {
-  "coreGzipBytes": 120798,
+  "coreGzipBytes": 120799,
   "coreBudget": 512000,
   "requiredOfflineBytes": 759685,
   "offlineBudget": 2097152,
   "requiredFiles": 213,
-  "buildId": "4a4958f23f4907e4"
+  "buildId": "c019fa7c2f6a0c59"
 }
