@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "browser": "155.0.4283.62",
+  "scope": "Observed production-browser practice, close, save and export; network requests are static same-origin GET. Browser internal chrome:/edge: download UI resources are counted separately. This does not audit hosting access logs.",
+  "networkRequests": 233,
+  "browserInternalRequests": 48,
+  "externalRequests": 0,
+  "nonGetRequests": 0,
+  "counters": {
+    "capture": 0,
+    "beacon": 0
+  },
+  "cookies": 0,
+  "persistedStores": [
+    "compositions",
+    "drafts",
+    "metadata",
+    "progress",
+    "settings"
+  ],
+  "rawInputKeysInDatabaseOrBackup": 0
+}

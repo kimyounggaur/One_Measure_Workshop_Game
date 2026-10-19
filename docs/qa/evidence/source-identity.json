@@ -1,0 +1,8 @@
+{
+  "status": "MATCH",
+  "scope": "Application src is unchanged during the 20-minute soak. Subsequent release changes are build identity, licenses and QA/docs only.",
+  "files": 62,
+  "sourceTreeSha256": "c1cf51df1b17d481f47cdc8be595feec924126d899174ce42a8b3412e1b6717b",
+  "soakBuildId": "9ba33e66741d23a4",
+  "finalBuildId": "4a4958f23f4907e4"
+}

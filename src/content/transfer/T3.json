@@ -1,0 +1,1 @@
+{"id":"T3","phase":"pre","objective":"LO3","prompt":"이 한 마디에서 소리가 나지 않는 것은 몇 번째 박일까요?","tokens":["N2","R2","N2","N2"],"options":["첫 번째","세 번째","두 번째","네 번째"],"correct":2,"explanation":"두 번째 박은 4분쉼표예요. 쉼을 포함한 총 길이는 4박이에요.","rubricMax":0}

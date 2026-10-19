@@ -1,0 +1,38 @@
+{
+  "name": "one-measure-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5386 --strictPort",
+    "preview": "vite preview --host 127.0.0.1 --port 4386 --strictPort",
+    "build": "npm run test:content && tsc --noEmit && vite build && node scripts/build-offline.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests scripts",
+    "test:unit": "vitest run tests/unit",
+    "test:content": "vitest run tests/content",
+    "test:integration": "vitest run tests/integration",
+    "test:audio": "playwright test tests/e2e/audio.spec.ts tests/e2e/audio-lifecycle.spec.ts",
+    "test:e2e": "playwright test",
+    "test:soak": "playwright test --config=playwright.soak.config.ts",
+    "verify": "node scripts/verify.mjs",
+    "check": "npm run typecheck && npm run lint && npm run test:unit && npm run build"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.13.0",
+    "fake-indexeddb": "6.2.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.5"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "measure-04",
+  "version": 1,
+  "title": "같은 길이 적은 시작",
+  "prompt": "2분음표 한 개와 4분음표 두 개로 한 마디를 만들어요. 세 번 시작하는 소리면 순서는 자유예요.",
+  "tempo": { "default": { "bpm": 72, "beatUnit": { "num": 1, "den": 4 } }, "minBpm": 50, "maxBpm": 120 },
+  "modelReferenceId": "original",
+  "objectiveIds": ["LO1", "LO4", "LO5"],
+  "meter": { "numerator": 4, "denominator": 4, "groupUnits": [1, 1, 1, 1] },
+  "gridTick": 240,
+  "initialEvents": [],
+  "palette": ["N4", "N2"],
+  "constraints": [
+    { "op": "fullCoverage" },
+    { "op": "inventory", "counts": { "N4": 1, "N2": 2 } }
+  ],
+  "references": {
+    "original": [
+      { "id": "a1", "kind": "note", "startTick": 0, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a2", "kind": "note", "startTick": 480, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a3", "kind": "note", "startTick": 960, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a4", "kind": "note", "startTick": 1440, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } }
+    ]
+  },
+  "expectedAnswerCount": 3,
+  "modelAvailable": true,
+  "hints": [
+    { "level": 1, "text": "긴 조각도 소리는 처음 한 번만 시작해요. 이어지는 동안에는 새로 치지 않아요." },
+    { "level": 2, "text": "2분음표 하나는 두 박, 4분음표 두 개는 한 박씩이에요. 순서는 자유예요." },
+    { "level": 3, "text": "처음 두 박에 2분음표를 놓고, 남은 두 박에는 4분음표를 하나씩 놓아 보세요.", "focus": { "startTick": 0, "endTick": 960 } }
+  ],
+  "explanation": {
+    "prompt": "2분음표 한 개와 4분음표 두 개의 차이는?",
+    "options": [
+      { "id": "same-length-different-count", "text": "총 길이는 같고 시작 횟수가 달라요." },
+      { "id": "different-length-same-count", "text": "총 길이는 다르고 시작 횟수는 같아요." },
+      { "id": "same-length-same-count", "text": "총 길이와 시작 횟수가 모두 같아요." }
+    ],
+    "correctId": "same-length-different-count"
+  },
+  "expectedConcept": "같은 총 길이도 지속음과 여러 번 시작하는 소리로 다르게 만들 수 있으며, 같은 재료의 순서를 바꾸어 여러 답을 만들 수 있다."
+}

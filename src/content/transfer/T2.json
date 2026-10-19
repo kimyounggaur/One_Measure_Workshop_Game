@@ -1,0 +1,1 @@
+{"id":"T2","phase":"pre","objective":"LO2","prompt":"4분음표 하나와 총 길이가 같은 8분음표는 몇 개일까요?","tokens":["N2","N1"],"options":["1개","2개","4개"],"correct":1,"explanation":"반 박 두 개가 한 박과 같아요.","rubricMax":0}

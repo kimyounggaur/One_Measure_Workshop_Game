@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-19T15:37:19.934Z",
+  "status": "PASS",
+  "buildId": "4a4958f23f4907e4",
+  "manifestFiles": 213,
+  "distFiles": 215,
+  "offlineBytes": 759685,
+  "hashErrors": [],
+  "unexpectedFiles": [],
+  "credentialPatternScanFiles": 177,
+  "credentialPatternFindings": [],
+  "rawLearnerData": "No browser profile/database/downloads copied; only compiled app and provided static assets shipped",
+  "limitations": "Pattern scan does not prove detection of every possible secret format. Raw tap variable names in app code are not stored learner data."
+}

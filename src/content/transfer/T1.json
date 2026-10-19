@@ -1,0 +1,1 @@
+{"id":"T1","phase":"pre","objective":"LO1","prompt":"4/4에서 2분음표 하나와 4분음표 두 개가 한 마디를 채울까요?","tokens":["N4","N2","N2"],"options":["예, 한 마디를 채워요","아니요, 음표가 세 개라 부족해요"],"correct":0,"explanation":"2+1+1=4박이에요. 조각 수와 시간의 합은 달라요.","rubricMax":0}

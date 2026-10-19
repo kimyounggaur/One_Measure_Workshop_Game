@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "themes": {
+    "light": {
+      "bg": "#F7F5EF",
+      "ink": "#20262D",
+      "note": "#246B73",
+      "rest": "#715D8E",
+      "noteInk": "#FFFFFF",
+      "restInk": "#FFFFFF",
+      "select": "#A85018",
+      "error": "#A33230",
+      "unknown": "#686D72"
+    },
+    "dark": {
+      "bg": "#171D23",
+      "ink": "#F7F5EF",
+      "note": "#A1D5D7",
+      "rest": "#D1BDE6",
+      "noteInk": "#17272B",
+      "restInk": "#292133",
+      "select": "#FFB579",
+      "error": "#FFAAA5",
+      "unknown": "#CDD3D7"
+    },
+    "high-contrast": {
+      "bg": "#FFFFFF",
+      "ink": "#000000",
+      "note": "#000000",
+      "rest": "#FFFFFF",
+      "noteInk": "#FFFFFF",
+      "restInk": "#000000",
+      "select": "#000000",
+      "error": "#000000",
+      "unknown": "#000000"
+    }
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "radius": {
+    "card": 12,
+    "tile": 8
+  },
+  "type": {
+    "bodyRem": 1,
+    "lineHeight": 1.5,
+    "orderRem": 1.25
+  },
+  "target": {
+    "minWidth": 44,
+    "minHeight": 44,
+    "gap": 8,
+    "primaryHeight": 52
+  },
+  "motion": {
+    "placementMs": 150,
+    "successMs": 200,
+    "reducedMotionMs": 0
+  },
+  "tile": {
+    "unitWidth": 48,
+    "height": 72,
+    "unitsPerMeasure": 8
+  },
+  "uiLanguage": "ko-KR"
+}

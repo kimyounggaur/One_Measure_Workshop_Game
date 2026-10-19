@@ -1,0 +1,40 @@
+{
+  "id": "measure-03",
+  "version": 1,
+  "title": "세 번째 박의 쉼",
+  "prompt": "세 번째 박은 쉬고, 나머지 박은 4분음표로 채워 주세요.",
+  "tempo": { "default": { "bpm": 72, "beatUnit": { "num": 1, "den": 4 } }, "minBpm": 50, "maxBpm": 120 },
+  "objectiveIds": ["LO3"],
+  "meter": { "numerator": 4, "denominator": 4, "groupUnits": [1, 1, 1, 1] },
+  "gridTick": 240,
+  "initialEvents": [],
+  "palette": ["N2", "R2"],
+  "constraints": [
+    { "op": "fullCoverage" },
+    { "op": "sameSemanticRhythm", "referenceId": "correct" }
+  ],
+  "references": {
+    "correct": [
+      { "id": "a1", "kind": "note", "startTick": 0, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a2", "kind": "note", "startTick": 480, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a3", "kind": "rest", "startTick": 960, "durationTick": 480, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a4", "kind": "note", "startTick": 1440, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } }
+    ]
+  },
+  "expectedAnswerCount": 1,
+  "modelAvailable": false,
+  "hints": [
+    { "level": 1, "text": "쉬는 시간도 한 마디의 일부예요. 빈칸과 쉼표는 달라요." },
+    { "level": 2, "text": "세 번째 박의 두 칸을 살펴보세요. 쉬겠다는 뜻을 쉼표로 표시해야 해요.", "focus": { "startTick": 960, "endTick": 1440 } },
+    { "level": 3, "text": "세 번째 박에 4분쉼표 하나를 놓고, 나머지 박에는 4분음표를 놓아 보세요.", "focus": { "startTick": 960, "endTick": 1440 } }
+  ],
+  "explanation": {
+    "prompt": "쉼표를 넣으면 한 마디의 길이가 줄어드나요?",
+    "options": [
+      { "id": "yes", "text": "네, 소리가 없으므로 줄어들어요." },
+      { "id": "no", "text": "아니요, 쉬는 시간도 마디의 길이에 포함돼요." }
+    ],
+    "correctId": "no"
+  },
+  "expectedConcept": "쉼표는 정해진 길이의 침묵이며, 소리가 없어도 한 마디의 시간을 차지한다."
+}

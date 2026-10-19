@@ -1,0 +1,14 @@
+/* Visual tokens only. This is not application logic. */
+:root { --mw-bg:#F7F5EF; --mw-ink:#20262D; --mw-note:#246B73; --mw-rest:#715D8E; --mw-selected:#A85018; --mw-error:#A33230; --mw-card-radius:12px; --mw-tile-radius:8px; --mw-motion:150ms; }
+[data-theme="dark"] { --mw-bg:#171D23; --mw-ink:#F7F5EF; --mw-note:#A1D5D7; --mw-rest:#D1BDE6; --mw-selected:#FFB579; --mw-error:#FFAAA5; }
+[data-theme="high-contrast"] { --mw-bg:#FFFFFF; --mw-ink:#000000; --mw-note:#000000; --mw-rest:#FFFFFF; --mw-selected:#000000; --mw-error:#000000; }
+.mw-icon { width:24px; height:24px; color:var(--mw-ink); flex:none; }
+.mw-control { min-width:44px; min-height:44px; border-radius:8px; }
+.mw-controls { gap:8px; }
+.mw-focus:focus-visible { outline:3px solid var(--mw-selected); outline-offset:3px; }
+.mw-primary { min-height:52px; }
+.mw-glyph { width:32px; height:32px; flex:none; color:var(--mw-ink); }
+.mw-pattern { color:var(--mw-ink); }
+.mw-decoration { pointer-events:none; user-select:none; }
+@media (prefers-reduced-motion:reduce) { :root { --mw-motion:0ms; } .mw-decoration { animation:none !important; } }
+@media (forced-colors:active) { .mw-focus:focus-visible { outline-color:Highlight; } .mw-icon { color:CanvasText; } .mw-decoration { display:none; } }

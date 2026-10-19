@@ -1,0 +1,27 @@
+{
+  "clock": {"contextTimeSec": 10, "performanceTimeMs": 20000, "audioTargetSec": 10.5, "expectedPerformanceMs": 20500},
+  "offsetCases": [
+    {"targetMs":1000,"rawInputMs":1120,"offsetMs":100,"correctedErrorMs":20},
+    {"targetMs":1000,"rawInputMs":920,"offsetMs":-100,"correctedErrorMs":20}
+  ],
+  "windows": [
+    {"barStartMs":1000,"barEndMs":4000,"WMs":160,"offsetMs":-250,"rawOpenMs":590,"rawCloseMs":3910,"finalizeMs":4000,"preservedRawTapMs":750},
+    {"barStartMs":1000,"barEndMs":4000,"WMs":160,"offsetMs":250,"rawOpenMs":1090,"rawCloseMs":4410,"finalizeMs":4410,"extraRawTapMs":4300}
+  ],
+  "matching": [
+    {"targetsMs":[1000,1500],"correctedInputsMs":[900,1000,1500],"WMs":160,"expectedPairs":[[0,1],[1,2]],"expectedExtras":[0]},
+    {"targetsMs":[1000],"correctedInputsMs":[990,1010],"WMs":160,"expectedPairs":[[0,0]],"expectedExtras":[1]},
+    {"targetsMs":[1000],"correctedInputsMs":[840],"WMs":160,"expectedPairs":[[0,0]],"expectedExtras":[]},
+    {"targetsMs":[1000],"correctedInputsMs":[839.999],"WMs":160,"expectedPairs":[],"expectedExtras":[0]}
+  ],
+  "calibration": {
+    "warmups":4,
+    "measurementTargets":12,
+    "validErrorsMs":[100,102,98,101,99,100,103,97,101,100,99,102],
+    "expectedMedianMs":100,
+    "minimumKeptSamples":8,
+    "maximumFinalMADMs":45,
+    "minimumOffsetMs":-250,
+    "maximumOffsetMs":250
+  }
+}

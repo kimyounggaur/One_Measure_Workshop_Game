@@ -1,0 +1,61 @@
+{
+  "fixtureVersion": 1,
+  "unitTick": 240,
+  "barUnits": 8,
+  "expectedAnswerCounts": [1, 1, 1, 3, 2, 1],
+  "puzzles": [
+    {
+      "id": "measure-01",
+      "palette": ["N2"],
+      "answers": [["N2", "N2", "N2", "N2"]],
+      "onsetsU": [[0, 2, 4, 6]],
+      "answerCount": 1
+    },
+    {
+      "id": "measure-02",
+      "palette": ["N1"],
+      "initial": ["N2", "N2", "N2", "N2"],
+      "editableSpanU": [2, 4],
+      "lockedStartsU": [0, 4, 6],
+      "finalInventory": {"N2": 3, "N1": 2},
+      "answers": [["N2", "N1", "N1", "N2", "N2"]],
+      "onsetsU": [[0, 2, 3, 4, 6]],
+      "answerCount": 1
+    },
+    {
+      "id": "measure-03",
+      "palette": ["N2", "R2"],
+      "answers": [["N2", "N2", "R2", "N2"]],
+      "onsetsU": [[0, 2, 6]],
+      "silenceSpansU": [[[4, 6]]],
+      "answerCount": 1
+    },
+    {
+      "id": "measure-04",
+      "palette": ["N4", "N2"],
+      "inventory": {"N4": 1, "N2": 2},
+      "answers": [["N4", "N2", "N2"], ["N2", "N4", "N2"], ["N2", "N2", "N4"]],
+      "onsetsU": [[0, 4, 6], [0, 2, 6], [0, 2, 4]],
+      "answerCount": 3
+    },
+    {
+      "id": "measure-05",
+      "palette": ["N2", "R2"],
+      "inventory": {"N2": 3, "R2": 1},
+      "original": ["N2", "N2", "R2", "N2"],
+      "firstKind": "note",
+      "answers": [["N2", "R2", "N2", "N2"], ["N2", "N2", "N2", "R2"]],
+      "onsetsU": [[0, 4, 6], [0, 2, 4]],
+      "silenceSpansU": [[[2, 4]], [[6, 8]]],
+      "answerCount": 2
+    },
+    {
+      "id": "measure-06",
+      "palette": ["N1", "N2", "R1", "R2"],
+      "answers": [["R1", "N1", "N2", "N1", "R1", "N2"]],
+      "onsetsU": [[1, 2, 4, 6]],
+      "silenceSpansU": [[[0, 1], [5, 6]]],
+      "answerCount": 1
+    }
+  ]
+}

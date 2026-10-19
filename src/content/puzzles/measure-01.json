@@ -1,0 +1,34 @@
+{
+  "id": "measure-01",
+  "version": 1,
+  "title": "네 박의 선반",
+  "prompt": "4분음표 네 개로 한 마디를 채워 주세요.",
+  "tempo": { "default": { "bpm": 72, "beatUnit": { "num": 1, "den": 4 } }, "minBpm": 50, "maxBpm": 120 },
+  "objectiveIds": ["LO1"],
+  "meter": { "numerator": 4, "denominator": 4, "groupUnits": [1, 1, 1, 1] },
+  "gridTick": 240,
+  "initialEvents": [],
+  "palette": ["N2"],
+  "constraints": [
+    { "op": "fullCoverage" },
+    { "op": "inventory", "counts": { "N2": 4 } }
+  ],
+  "references": {},
+  "expectedAnswerCount": 1,
+  "modelAvailable": false,
+  "hints": [
+    { "level": 1, "text": "박 번호마다 4분음표 하나가 놓여요. 두 칸이 한 박이에요." },
+    { "level": 2, "text": "아직 비어 있는 첫 박을 찾아보세요. 한 박은 두 칸을 차지해요." },
+    { "level": 3, "text": "첫 박의 두 칸에 4분음표 하나를 놓아 보세요.", "focus": { "startTick": 0, "endTick": 480 } }
+  ],
+  "explanation": {
+    "prompt": "마디를 채운 총 길이는?",
+    "options": [
+      { "id": "two-beats", "text": "2박" },
+      { "id": "four-beats", "text": "4박" },
+      { "id": "eight-beats", "text": "8박" }
+    ],
+    "correctId": "four-beats"
+  },
+  "expectedConcept": "두 칸이 한 박이며, 4분음표 네 개의 총 길이는 한 마디인 4박이다."
+}

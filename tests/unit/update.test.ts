@@ -1,0 +1,5 @@
+import {it,expect} from 'vitest';
+import {applyWaiting} from '../../src/offline/serviceWorker';
+function fixture(contentVersion='1'){const order:string[]=[];const worker={postMessage(message:{type:string},ports?:MessagePort[]){if(message.type==='STATUS'){ports?.[0].postMessage({ready:true,buildId:'new',contentVersion,schemaVersion:1,files:1,bytes:100});ports?.[0].close();}else order.push('apply');}};return {registration:{waiting:worker} as unknown as ServiceWorkerRegistration,order};}
+it('update saves successfully, then stops audio, then applies',async()=>{const {registration,order}=fixture();await applyWaiting(registration,async()=>{order.push('save');return true;},()=>order.push('stop'));expect(order).toEqual(['save','stop','apply']);});
+it('failed save and content mismatch never apply or stop audio',async()=>{const a=fixture();await expect(applyWaiting(a.registration,async()=>false,()=>a.order.push('stop'))).rejects.toThrow('저장');expect(a.order).toEqual([]);const b=fixture('future');await expect(applyWaiting(b.registration,async()=>true,()=>b.order.push('stop'))).rejects.toThrow('버전');expect(b.order).toEqual([]);});

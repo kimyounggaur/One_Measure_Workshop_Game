@@ -1,0 +1,9 @@
+import notice from '../../docs/ASSET_NOTICES.md?raw';
+import type {useStorageSession} from './useStorageSession';
+export function HelpSettings({storage}:{storage:ReturnType<typeof useStorageSession>}){
+  return <section className="help-settings card" aria-label="도움말과 설정"><details><summary>도움말 · 화면 설정 · 출처</summary><h2>내게 편한 화면</h2><label>화면 테마 <select value={storage.settings.theme} disabled={!storage.canEdit} onChange={e=>storage.setSettings({...storage.settings,theme:e.target.value as typeof storage.settings.theme})}><option value="light">밝은 공방</option><option value="dark">어두운 공방</option><option value="high-contrast">고대비</option></select></label><label className="check-label"><input type="checkbox" disabled={!storage.canEdit} checked={storage.settings.reducedMotion} onChange={e=>storage.setSettings({...storage.settings,reducedMotion:e.target.checked})}/> 움직임 줄이기</label>
+    <h2>조립하는 방법</h2><p>소리 또는 쉼을 고르고, 길이를 고른 다음 박과 앞·뒤 반 박을 선택해요. 드래그가 필요하지 않아요. 조각 목록에서도 선택·이동·길이 변경을 할 수 있어요.</p><p>음표의 시작점은 새 소리가 나는 자리예요. 길게 이어지는 구간은 쉼이 아니에요. 빗금 쉼표는 정해진 쉬는 시간, 점선 빈칸은 아직 정하지 않은 시간이에요.</p><p>길이를 둘로 나누면 다시 소리를 시작해요. 실수는 되돌리기로 고칠 수 있어요. 설명과 선택 연습 결과가 이론 통과를 취소하지 않아요.</p><h2>소리가 들리지 않을 때</h2><p>듣기 버튼을 누르고 기기 음량과 선택한 출력을 확인해 주세요. 이 앱은 시스템 무음의 원인을 알 수 없어요. 소리 없이도 여섯 문제를 모두 조립할 수 있어요.</p>
+    <h2>내 기록과 개인정보</h2><p>작품과 진도는 이 브라우저에 저장해요. 계정·마이크·위치·광고·분석 수집을 사용하지 않아요. 직접 치기의 원시 입력 시각은 메모리에만 두고 결과를 닫으면 버려요. 웹 호스팅 사업자는 사이트 제공에 필요한 접속 정보를 처리할 수 있어요.</p><p>브라우저의 데이터 삭제나 저장 공간 정리로 작품이 사라질 수 있어요. 보관함에서 JSON 백업을 내려받을 수 있어요. 기기 간 자동 동기화는 없어요.</p>
+    <h2>한 마디 조립실 1.0.0</h2><p>음악 기호는 프로젝트용 SVG, 공방 배경은 장식용 생성 이미지예요. 시스템 글꼴과 Web Audio 합성음을 사용해요. React/React DOM은 MIT 라이선스입니다.</p><details><summary>에셋 출처와 사용 안내 원문</summary><pre className="notice-text">{notice}</pre></details><p>이 배포는 자동 검사로 확인한 테스트 버전이에요. 음악교육 전문가 검수, 실제 iOS/Android와 보조기술 검수는 아직 실시하지 않았어요.</p>
+  </details></section>;
+}

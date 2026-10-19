@@ -1,0 +1,25 @@
+id,requirement,source_sections,implementation_module,test_ids,owner_stage,status
+R01,한국어 4/4 한 마디 8분격자 한 음색 MVP,"1;5;6","domain/time;ui;audio","F01;F06-F08","S00;S02;S07",AUTO_PASS
+R02,기약분수 PPQ480 정수 판정,"6.1;14.3;17","domain/time;meter","F01-F06",S02,AUTO_PASS
+R03,onset duration rest unknown 분리,"6;12.2","domain/rhythm;signatures","B01;B14-B16",S03,AUTO_PASS
+R04,여섯 문제 정확한 전체 정답 집합,"9;25","content/puzzles;domain/grading;constraints","appendix-A;appendix-C",S04,AUTO_PASS
+R05,L2 잠금 팔레트 초기 예외,"9.2;12.1;17","domain/validation;commands;persistence/importExport","B04;B05;G08","S04;S05;S11",AUTO_PASS
+R06,명령 transaction undo 이동 분할,"11.3;16","domain/commands;app/sessionReducer","B20-B22","S05;S06",AUTO_PASS
+R07,L4 L5 다중 답과 실제 답 targets,"9.4-9.5;15.1","domain/grading;tapMatching;ui","appendix-A;L4-L5-targets","S04;S08;S09",AUTO_PASS
+R08,L6 onset 동일 duration 상이 반례,"9.6;12.2","domain/rhythm;grading;content","B11-B13","S03;S04;S08",AUTO_PASS
+R09,320px 단계형 탭 목록 키보드,11,"ui/RhythmGrid;BeatPositionPicker;EventListEditor","viewport;keyboard;AT","S06;S13",AUTO_PASS_MANUAL_PENDING
+R10,이론 설명 운동 수행 분리,"4.2;12.3;16","app/machine;progress;ui/RESULT","B23;B24","S05;S08;S10",AUTO_PASS
+R11,오디오 시계 불변 snapshot 노드 정리,"13.2;14","audio/AudioEngine;compileSchedule;synthVoice",appendix-D,S07,AUTO_PASS_MANUAL_PENDING
+R12,native fallback clock 보정 부호,"14.5-14.7","audio/ClockMapper;domain/tapWindows",appendix-E-clock-offset,"S09;S10",AUTO_PASS_MANUAL_PENDING
+R13,보정 표본 MAD stale,14.7,"audio/Calibration;ui/Calibration",appendix-E-calibration,S10,AUTO_PASS_MANUAL_PENDING
+R14,DP matching 경계 입력창,15,"domain/tapMatching;tapWindows",appendix-E-windows-matching,"S09;S10",AUTO_PASS
+R15,모바일 중단 반복입력 저신뢰도,"14.8;15.2;16","audio/InputCollector;AudioEngine;app/machine","lifecycle;input","S07;S10;S15",AUTO_PASS_MANUAL_PENDING
+R16,자유 모드 all-rest A/B 8u 시간 예산,10,"ui/FreeComposer;domain/commands","B19;B20","S06;S08",AUTO_PASS
+R17,저장 revision previousGood fencing,"16.3;18.1-18.2","persistence/db;writerLease",G01-G08,S11,AUTO_PASS
+R18,안전한 백업 20슬롯 삭제 확인,18.3,"persistence/importExport;migrations;ui/SAVES",G09-G18,S11,AUTO_PASS
+R19,오프라인 준비 안전 업데이트 DB 보존,18.4,"offline/serviceWorker;ui/UpdateBanner",offline-update-E2E,S12,AUTO_PASS
+R20,개인정보 최소화 로컬 전용 권한 경계,"18.5;23","persistence;docs/release/privacy","network;security","S00;S11;S16",AUTO_PASS_MANUAL_PENDING
+R21,기호 대비 비색상 보조기술 라이선스,"11.5;19","ui/styles;assets;help;license","accessibility;contrast;assets",S13,AUTO_PASS_MANUAL_PENDING
+R22,선택 진단 전이 문항 학습효과 과장 금지,"4;26","content/transfer;ui/DiagnosticFlow;TransferReview","T1-T8;pilot",S14,AUTO_PASS_MANUAL_PENDING
+R23,미래 6/8 붙임줄 의미 보존과 노출 금지,"6;24","domain/time;meter;validation;content/schema",appendix-F,"S02;S03;S16",AUTO_PASS
+R24,자동 실기기 교육 검증 분리 출시 차단,"20-23;27","tests;docs/qa;docs/release",appendix-H,"S15;S16",AUTO_PASS_RELEASE_HELD

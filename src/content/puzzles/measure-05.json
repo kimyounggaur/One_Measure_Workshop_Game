@@ -1,0 +1,44 @@
+{
+  "id": "measure-05",
+  "version": 1,
+  "title": "쉼의 자리를 바꾸기",
+  "prompt": "4분음표 세 개와 4분쉼표 하나를 써요. 첫 박은 소리로 시작하고, 원래와 다른 박에서 쉬게 해 주세요.",
+  "tempo": { "default": { "bpm": 72, "beatUnit": { "num": 1, "den": 4 } }, "minBpm": 50, "maxBpm": 120 },
+  "modelReferenceId": "original",
+  "objectiveIds": ["LO3", "LO5"],
+  "meter": { "numerator": 4, "denominator": 4, "groupUnits": [1, 1, 1, 1] },
+  "gridTick": 240,
+  "initialEvents": [],
+  "palette": ["N2", "R2"],
+  "constraints": [
+    { "op": "fullCoverage" },
+    { "op": "inventory", "counts": { "N2": 3, "R2": 1 } },
+    { "op": "firstKind", "kind": "note" },
+    { "op": "differentSilence", "referenceId": "original" }
+  ],
+  "references": {
+    "original": [
+      { "id": "a1", "kind": "note", "startTick": 0, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a2", "kind": "note", "startTick": 480, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a3", "kind": "rest", "startTick": 960, "durationTick": 480, "sourceValue": { "num": 1, "den": 4 } },
+      { "id": "a4", "kind": "note", "startTick": 1440, "durationTick": 480, "pitch": 60, "sourceValue": { "num": 1, "den": 4 } }
+    ]
+  },
+  "expectedAnswerCount": 2,
+  "modelAvailable": true,
+  "hints": [
+    { "level": 1, "text": "재료가 같아도 쉼표의 자리를 바꾸면 다르게 들려요." },
+    { "level": 2, "text": "첫 박과 원래 쉼표 자리 이외의 박을 살펴보세요." },
+    { "level": 3, "text": "두 번째 박을 쉼으로 바꾸고, 남은 박에 음표를 놓아 보세요.", "focus": { "startTick": 480, "endTick": 960 } }
+  ],
+  "explanation": {
+    "prompt": "원래 리듬과 새 리듬에서 같은 것은 무엇인가요?",
+    "options": [
+      { "id": "length-and-count", "text": "총 길이와 소리 시작 횟수" },
+      { "id": "rest-position", "text": "쉬는 위치" },
+      { "id": "all-onsets", "text": "모든 소리 시작 시점" }
+    ],
+    "correctId": "length-and-count"
+  },
+  "expectedConcept": "쉼표의 위치를 바꾸어도 총 길이와 재료 수를 유지할 수 있다."
+}

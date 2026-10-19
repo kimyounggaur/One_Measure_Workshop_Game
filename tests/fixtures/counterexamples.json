@@ -1,0 +1,11 @@
+[
+  { "id": "B01", "puzzleId": "measure-01", "tokens": ["N2", "N2", "N2"], "code": "E_GAP" },
+  { "id": "B04", "puzzleId": "measure-02", "tokens": ["N2", "N2", "N2", "N2"], "code": "E_INVENTORY" },
+  { "id": "B07", "puzzleId": "measure-03", "tokens": ["N2", "R2", "N2", "N2"], "code": "E_REST_POSITION" },
+  { "id": "B08", "puzzleId": "measure-04", "tokens": ["N4", "N4"], "code": "E_INVENTORY" },
+  { "id": "B09", "puzzleId": "measure-05", "tokens": ["N2", "N2", "R2", "N2"], "code": "E_SAME_RHYTHM" },
+  { "id": "B10", "puzzleId": "measure-05", "tokens": ["R2", "N2", "N2", "N2"], "code": "E_FIRST_KIND" },
+  { "id": "B11", "puzzleId": "measure-06", "tokens": ["R1", "N1", "N2", "N2", "N2"], "code": "E_DURATION" },
+  { "id": "B12", "puzzleId": "measure-06", "tokens": ["N1", "R1", "N2", "N1", "R1", "N2"], "code": "E_ONSET" },
+  { "id": "B13", "puzzleId": "measure-06", "tokens": ["R2", "N2", "N2", "N2"], "code": "E_ONSET" }
+]
